@@ -1,0 +1,44 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>随机文本网页</title>
+    <style>
+        body {
+            zoom: 2;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            margin-bottom: 20px;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+ }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>君不知…</h1    <img src="tips.gif" alt随机图片">
+    <a href="javascript:;" onclick="generateRandomText()">下一条提示</a>
+    <p id="randomText"></p>
+</div>
+<script>
+ function generateRandomText() {
+        var texts = [
+            "学习并熟悉HTML标签和它们的用途。",
+            "使用语义化的标签来更好地描述你的内容。",
+            "注意闭合标签并正确嵌套它们，以避免错误。",
+            "检查代码的语法和拼写错误。",
+            "使用CSS样式表来美化和自定义你的网页。",
+            "掌握基本表单元素和其属性，为用户提供交互功能。",
+            // 其他文本...
+        ];
+        var randomIndex = Math.floor(Math.random() * texts.length);
+        document.getElementById("randomText").innerHTML = texts[randomIndex];
+    }
+</script>
+</body>
+</html>
